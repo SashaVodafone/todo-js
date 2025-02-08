@@ -1,0 +1,39 @@
+/* media query template */
+/* general styles and mobile */
+
+/* tablet */
+@media (min-width: 768px) {
+}
+/* desktop */
+@media (min-width: 1024px) {
+}
+
+.svg-button {
+  /* media query template */
+  /* general styles and mobile */
+  display: flex;
+  width: 100%;
+  padding: 15%;
+  aspect-ratio: 1 / 1;
+  /* tablet */
+  @media (min-width: 768px) {
+  }
+  /* desktop */
+  @media (min-width: 1024px) {
+  }
+}
+
+.svg-icon {
+  /* media query template */
+  /* general styles and mobile */
+  width: 100%;
+  /* tablet */
+  @media (min-width: 768px) {
+  }
+  /* desktop */
+  @media (min-width: 1024px) {
+  }
+}
+
+.delete {
+}

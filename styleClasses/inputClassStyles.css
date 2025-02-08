@@ -1,0 +1,74 @@
+/* media query template */
+/* general styles and mobile */
+
+/* tablet */
+@media (min-width: 768px) {
+}
+/* desktop */
+@media (min-width: 1024px) {
+}
+
+.to-do-input-container {
+  /* general styles and mobile */
+  display: flex;
+  row-gap: 6px;
+  flex-direction: column;
+  width: 75%;
+  margin-left: 5%;
+  /* tablet */
+  @media (min-width: 768px) {
+  }
+  /* desktop */
+  @media (min-width: 1024px) {
+  }
+}
+
+.to-do-input-button-container {
+  /* general styles and mobile */
+  display: flex;
+  height: 40px;
+  width: 100%;
+
+  /* tablet */
+  @media (min-width: 768px) {
+  }
+  /* desktop */
+  @media (min-width: 1024px) {
+  }
+}
+
+.to-do-input {
+  /* padding: 0; */
+  padding-left: 12px;
+  height: 100%;
+  box-sizing: border-box;
+  flex-basis: 90%;
+  border-radius: 8px 0 0 8px;
+  margin-right: 0;
+  font-size: large;
+}
+.to-do-add {
+  height: 100%;
+  border-radius: 0 8px 8px 0;
+  margin-left: 0;
+}
+
+.input-error-container {
+  display: flex;
+  align-items: center;
+}
+
+.input-error-message {
+  /* padding: 1%; */
+  color: #bc4749;
+  margin: 0;
+  /* background-color: white;
+  border-radius: 8px;
+  border: 2px #bc4749 solid;
+  border-width: 0 0 0 14px; */
+}
+
+.input-error-icon {
+  fill: #bc4749;
+  margin-right: 5px;
+}
