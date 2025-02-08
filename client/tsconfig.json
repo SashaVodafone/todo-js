@@ -12,6 +12,8 @@
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
+    "rootDir": "." /* Specify the root folder within your source files. */,
+    "baseUrl": "./client",
 
     /* Linting */
     "strict": true,

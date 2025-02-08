@@ -1,8 +1,10 @@
 import { defineConfig, loadEnv } from "vite";
+import path from "path";
 import mkcert from "vite-plugin-mkcert";
 
 export default defineConfig(({ command, mode }) => {
-  const env = loadEnv(mode, process.cwd(), "");
+  const root = path.resolve(__dirname, "../");
+  const env = loadEnv(mode, root, "");
   return {
     server: {
       cors: {

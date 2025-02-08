@@ -1,25 +1,19 @@
 {
-  "name": "to-do-app",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/SashaVodafone/todo-js#readme",
+  "bugs": {
+    "url": "https://github.com/SashaVodafone/todo-js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SashaVodafone/todo-js.git"
+  },
+  "license": "ISC",
+  "author": "",
   "scripts": {
-    "start": "vite",
-    "server": "cd server && yarn start",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "@types/node": "^22.12.0",
-    "typescript": "~5.6.2",
-    "vite": "^6.0.5"
-  },
-  "dependencies": {
-    "dotenv": "^16.4.7",
-    "vite-plugin-mkcert": "^1.17.6"
-  },
-  "volta": {
-    "node": "23.6.1",
-    "yarn": "1.22.21"
+    "client": "cd client && yarn install && yarn start",
+    "server": "cd server && yarn install && yarn start"
   }
 }
