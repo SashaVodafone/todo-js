@@ -10,9 +10,9 @@ async function main() {
   // to do list
   // const listContainer = document.getElementById("to-do-list-container");
   // buttons
-  const getDeleteButton = (id: number) => {
-    return document.getElementById(`delete-button-${id}`);
-  };
+  // const getDeleteButton = (id: number) => {
+  //   return document.getElementById(`delete-button-${id}`);
+  // };
   //data
 
   const todosArray = await getAllTodo();

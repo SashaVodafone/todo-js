@@ -34,61 +34,42 @@ function createSvg(
   svg.setAttribute("viewBox", svgProperties.viewBox);
 
   groups.forEach(group => {
-    if (group.paths) {
-      group.paths.forEach(path => {
-        const pathElement = document.createElementNS(
-          "http://www.w3.org/2000/svg",
-          "path",
-        );
-        Object.keys(path).forEach(key => {
-          const styleAttribute = key as keyof pathObject;
-          const value = path[styleAttribute];
-          if (typeof value !== "undefined") {
-            pathElement.setAttribute(key, value.toString());
-          }
-        });
-        // pathElement.setAttribute("d", path.d);
-        // if (path.display) {
-        //   pathElement.setAttribute("display", path.display);
-        // }
-        // if (path.fillRule) {
-        //   pathElement.setAttribute("fill-rule", path.fillRule);
-        // }
-        // if (path.clipRule) {
-        //   pathElement.setAttribute("clip-rule", path.clipRule);
-        // }
-        // if (path.stroke) {
-        //   pathElement.setAttribute("stroke", path.stroke);
-        // }
-        // if (path.strokeWidth) {
-        //   pathElement.setAttribute("stroke-width", path.strokeWidth);
-        // }
-        // if (path.strokeLinecap) {
-        //   pathElement.setAttribute("stroke-linecap", path.strokeLinecap);
-        // }
-        // if (path.strokeLinejoin) {
-        //   pathElement.setAttribute("stroke-linejoin", path.strokeLinejoin);
-        // }
-        svg.appendChild(pathElement);
+    group.paths?.forEach(path => {
+      const pathElement = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "path",
+      );
+      Object.keys(path).forEach(key => {
+        const styleAttribute = key as keyof pathObject;
+        const value = path[styleAttribute];
+        if (typeof value !== "undefined") {
+          pathElement.setAttribute(key, value.toString());
+        }
       });
-      return;
-    }
-    const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+      svg.appendChild(pathElement);
+    });
+
+    const groupElement = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "g",
+    );
     const pathElement = document.createElementNS(
       "http://www.w3.org/2000/svg",
       "path",
     );
-    pathElement.setAttribute("d", group.d);
+    if (group.d) {
+      groupElement.setAttribute("d", group.d);
+    }
     if (group.display) {
-      pathElement.setAttribute("display", group.display);
+      groupElement.setAttribute("display", group.display);
     }
     if (group.fillRule) {
-      pathElement.setAttribute("fill-rule", group.fillRule);
+      groupElement.setAttribute("fill-rule", group.fillRule);
     }
     if (group.clipRule) {
-      pathElement.setAttribute("clip-rule", group.clipRule);
+      groupElement.setAttribute("clip-rule", group.clipRule);
     }
-    svg.appendChild(g).appendChild(pathElement);
+    svg.appendChild(groupElement).appendChild(pathElement);
   });
 
   return svg;
