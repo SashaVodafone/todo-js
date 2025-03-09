@@ -17,4 +17,4 @@ async function getAllTodo() {
     console.error(error);
   }
 }
-export default getAllTodo;
+export { getAllTodo };

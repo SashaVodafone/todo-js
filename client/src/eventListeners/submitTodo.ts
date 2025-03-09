@@ -1,6 +1,6 @@
 import createInputError from "../components/errors/createInputError";
 import createTodo from "../components/todoItem/createTodo";
-import postNewTodo from "../fetch/postNewTodo";
+import { postNewTodo } from "../fetch/postNewTodo";
 import type { TodoInput, TodoResponse } from "../types/todo.types";
 
 export async function submitTodo(

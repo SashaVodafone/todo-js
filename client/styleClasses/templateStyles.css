@@ -1,0 +1,19 @@
+/* media query template */
+/* general styles and mobile */
+
+/* tablet */
+@media (min-width: 768px) {
+}
+/* desktop */
+@media (min-width: 1024px) {
+}
+
+.page-main {
+  margin: 50px;
+  /* tablet */
+  @media (min-width: 768px) {
+  }
+  /* desktop */
+  @media (min-width: 1024px) {
+  }
+}

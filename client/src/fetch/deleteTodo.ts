@@ -17,4 +17,4 @@ async function deleteTodo(id: string) {
     console.error(error);
   }
 }
-export default deleteTodo;
+export { deleteTodo };

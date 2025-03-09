@@ -1,3 +1,4 @@
-export { default as getAllTodo } from "./getAllTodo";
-export { default as postNewTodo } from "./postNewTodo";
-export { default as deleteTodo } from "./deleteTodo";
+export { getAllTodo } from "./getAllTodo";
+export { postNewTodo } from "./postNewTodo";
+export { deleteTodo } from "./deleteTodo";
+export { completeTodo } from "./completeTodo";

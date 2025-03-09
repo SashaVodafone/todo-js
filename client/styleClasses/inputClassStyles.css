@@ -13,8 +13,8 @@
   display: flex;
   row-gap: 6px;
   flex-direction: column;
-  width: 75%;
-  margin-left: 5%;
+  width: 90%;
+  margin: auto;
   /* tablet */
   @media (min-width: 768px) {
   }
@@ -26,7 +26,8 @@
 .to-do-input-button-container {
   /* general styles and mobile */
   display: flex;
-  height: 40px;
+  min-height: 40px;
+  max-height: 120px;
   width: 100%;
 
   /* tablet */
@@ -40,12 +41,14 @@
 .to-do-input {
   /* padding: 0; */
   padding-left: 12px;
-  height: 100%;
+  min-height: 40px;
+  max-height: 120px;
   box-sizing: border-box;
-  flex-basis: 90%;
+  flex-grow: 2;
   border-radius: 8px 0 0 8px;
   margin-right: 0;
   font-size: large;
+  overflow: auto;
 }
 .to-do-add {
   height: 100%;

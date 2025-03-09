@@ -10,14 +10,18 @@ async function main() {
   // to do list
   // const listContainer = document.getElementById("to-do-list-container");
   // buttons
-  const getDeleteButton = (index: number) => {
-    return document.getElementById(`delete-button-${index}`);
+  const getDeleteButton = (id: number) => {
+    return document.getElementById(`delete-button-${id}`);
   };
   //data
 
   const todosArray = await getAllTodo();
 
-  todosArray.forEach((todo: TodoResponse) => {
+  todosArray.forEach((todo: TodoResponse, index: number) => {
+    // debugging
+    if (index === 0) {
+      console.log("first todo", todo);
+    }
     createTodo(todo);
   });
 

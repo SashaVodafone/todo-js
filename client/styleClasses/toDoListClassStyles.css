@@ -12,26 +12,18 @@
 .to-do-list-container {
   /* general styles and mobile */
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: space-between;
-  margin: 5%;
+  width: 90%;
+  margin: 20px auto;
   row-gap: 20px;
-  /* margin-block-start: 0;
-  margin-block-end: 0; */
   padding-inline-start: 0;
   /* tablet */
   @media (min-width: 768px) {
-    justify-content: flex-start;
-    column-gap: 10%;
-    margin: 5% 10%;
-    /* margin-right: 0; */
-    flex-flow: row wrap;
+    margin: 40px auto;
   }
   /* desktop */
   @media (min-width: 1024px) {
-    column-gap: 5%;
-    margin: 5%;
-    /* margin-right: 0; */
   }
 }
 
@@ -40,46 +32,43 @@
   list-style-type: none;
   width: 100%;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column;
   /* tablet */
   @media (min-width: 768px) {
-    width: 45%;
   }
   /* desktop */
   @media (min-width: 1024px) {
-    width: 30%;
   }
+}
+
+.to-do-title {
+  /* general styles and mobile */
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  /* tablet */
+  @media (min-width: 768px) {
+  }
+  /* desktop */
+  @media (min-width: 1024px) {
+  }
+}
+
+.completed {
+  text-decoration: line-through;
 }
 
 .to-do-checkbox-container {
-  /* general styles and mobile */
   display: flex;
   align-items: center;
   margin-right: 5%;
-  /* tablet */
-  @media (min-width: 768px) {
-  }
-  /* desktop */
-  @media (min-width: 1024px) {
-  }
 }
 
 .to-do-button-container {
-  /* general styles and mobile */
   display: flex;
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* tablet */
-  @media (min-width: 768px) {
-  }
-  /* desktop */
-  @media (min-width: 1024px) {
-  }
+  height: 60px;
 }
 
-.delete {
-  fill: #bc4749;
-}
-
-.see-more {
+.see-more-container {
 }

@@ -23,4 +23,4 @@ async function postNewTodo(todo: TodoInput) {
     return error;
   }
 }
-export default postNewTodo;
+export { postNewTodo };
