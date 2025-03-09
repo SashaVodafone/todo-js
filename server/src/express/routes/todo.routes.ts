@@ -71,7 +71,7 @@ todoRouter.get("/id/:id", async (req, res) => {
 });
 
 // update a todo by id
-todoRouter.put("/:id", async (req, res) => {
+todoRouter.patch("/:id", async (req, res) => {
   try {
     // throw errors if required fields are missing
     if (!req.body) {
@@ -104,7 +104,7 @@ todoRouter.put("/:id", async (req, res) => {
   }
 });
 
-todoRouter.put("/:id/complete/:boolean", async (req, res) => {
+todoRouter.patch("/:id/complete/:boolean", async (req, res) => {
   try {
     if (!req.params.id) {
       res.status(400);
